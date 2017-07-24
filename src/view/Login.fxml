@@ -6,10 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
    <children>
-      <Label layoutX="285.0" layoutY="37.0" text="Login" />
-      <Button layoutX="274.0" layoutY="149.0" mnemonicParsing="false" onAction="#login" text="Login" />
-      <Button layoutX="126.0" layoutY="149.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
+      <Label layoutX="175.0" layoutY="34.0" text="Login" />
+      <Button layoutX="135.0" layoutY="188.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <Button layoutX="196.0" layoutY="188.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
+      <TextField fx:id="textLogin" layoutX="116.0" layoutY="95.0" promptText="Login" />
+      <PasswordField fx:id="textSenha" layoutX="116.0" layoutY="145.0" promptText="Senha" />
+      <Button layoutX="229.0" layoutY="280.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
    </children>
 </AnchorPane>

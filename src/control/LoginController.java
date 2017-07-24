@@ -2,20 +2,25 @@ package control;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.TCC;
 
 public class LoginController implements Initializable {
 
     @FXML
+    private PasswordField textSenha;
+
+    @FXML
+    private TextField textLogin;
+    
+    @FXML
     void login(ActionEvent event) {
         TCC tcc = new TCC();
-        Stage stage = new Stage();
         tcc.iniciaStage("Home.fxml");
         
     }
@@ -24,6 +29,11 @@ public class LoginController implements Initializable {
     void fechar(ActionEvent event) {
         TCC tcc = new TCC();
         tcc.fechaTela();
+    }
+    
+    @FXML
+    void cadastrar(ActionEvent event) {
+
     }
     
     @Override
