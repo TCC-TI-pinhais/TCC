@@ -6,6 +6,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CadastraUsuarioController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="control.CadastraUsuarioController">
+   <children>
+      <Label layoutX="152.0" layoutY="29.0" text="Cadastra" />
+      <TextField fx:id="textLogin" layoutX="101.0" layoutY="77.0" promptText="Login" />
+      <PasswordField fx:id="textSenha" layoutX="101.0" layoutY="116.0" promptText="Senha" />
+      <TextField fx:id="textEmail" layoutX="101.0" layoutY="156.0" promptText="Email" />
+      <CheckBox fx:id="checkRevendedor" layoutX="133.0" layoutY="198.0" mnemonicParsing="false" text="Revendedor" />
+      <Button layoutX="89.0" layoutY="256.0" mnemonicParsing="false" onAction="#cadastra" text="Cadastrar" />
+      <Button layoutX="194.0" layoutY="256.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+   </children>
 </AnchorPane>

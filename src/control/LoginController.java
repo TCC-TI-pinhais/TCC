@@ -32,7 +32,9 @@ public class LoginController implements Initializable {
     
     @FXML
     void cadastrar(ActionEvent event) {
-
+        TCC tcc = new TCC();
+        tcc.fechaTela();
+        tcc.iniciaStage("CadastraUsuario.fxml");
     }
     
     @Override
