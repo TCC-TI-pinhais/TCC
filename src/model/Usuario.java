@@ -2,6 +2,7 @@ package model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import model.jdbc.UsuarioDAO;
 
 public class Usuario {
     
@@ -19,6 +20,11 @@ public class Usuario {
 
     public static void setUsuarios(ObservableList<Usuario> usuarios) {
         Usuario.usuarios = usuarios;
+    }
+    
+    public static void atualizaUsuarios(){
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Usuario.setUsuarios(usuarioDAO.selectUsuario());
     }
     
     public int getId_usuario() {
