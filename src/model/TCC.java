@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class TCC extends Application {
     
-    private static String tela = "Login.fxml";
+    private static String tela = "Inicio.fxml";
     private static Stage palco = new Stage();
     
     public void iniciaStage(String stage){
