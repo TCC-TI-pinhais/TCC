@@ -7,7 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import model.CriptografiaOtp;
 import model.TCC;
+import model.Usuario;
 
 public class LoginController implements Initializable {
 
@@ -19,8 +21,28 @@ public class LoginController implements Initializable {
     
     @FXML
     void login(ActionEvent event) {
+        CriptografiaOtp criptografia = new CriptografiaOtp();
         TCC tcc = new TCC();
-        tcc.iniciaStage("Home.fxml");
+        String senha;
+        for (int i = 0; i < Usuario.getUsuarios().size(); i++) {
+            
+            senha = criptografia.decriptografa(Usuario.getUsuarios().get(i).getSenha(), Usuario.getUsuarios().get(i).getChaveSenha());
+            if (senha.equals(textSenha.getText()) && textLogin.getText().equals(Usuario.getUsuarios().get(i).getLogin())) {
+                
+                if (Usuario.getUsuarios().get(i).isRevendedor()) {
+                    tcc.fechaTela();
+                    tcc.iniciaStage("HomeRevendedor.fxml");
+                    
+                } else {
+                    tcc.fechaTela();
+                    tcc.iniciaStage("HomeUsuario.fxml");
+                }
+                
+            }
+            
+        }
+        
+        
         
     }
     
@@ -39,7 +61,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        Usuario.atualizaUsuarios();
     }    
     
 }

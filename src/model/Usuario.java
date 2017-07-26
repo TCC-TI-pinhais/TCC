@@ -12,6 +12,7 @@ public class Usuario {
     private String chaveSenha;
     private String email;
     private boolean revendedor;
+    private boolean adm;
     private static ObservableList<Usuario> usuarios = FXCollections.observableArrayList();
 
     public static ObservableList<Usuario> getUsuarios() {
@@ -20,6 +21,14 @@ public class Usuario {
 
     public static void setUsuarios(ObservableList<Usuario> usuarios) {
         Usuario.usuarios = usuarios;
+    }
+
+    public boolean isAdm() {
+        return adm;
+    }
+
+    public void setAdm(boolean adm) {
+        this.adm = adm;
     }
     
     public static void atualizaUsuarios(){

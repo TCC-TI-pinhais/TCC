@@ -41,16 +41,20 @@ public class CadastraUsuarioController implements Initializable {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             Usuario usuario = new Usuario();
             CriptografiaOtp criptografia = new CriptografiaOtp();
+            TCC tcc = new TCC();
             Alertas alerta = new Alertas();
             usuario.setLogin(textLogin.getText());
             usuario.setEmail(textEmail.getText());
             usuario.setRevendedor(checkRevendedor.isSelected());
+            usuario.setAdm(false);
             String chave = criptografia.genKey(textSenha.getText().length());
             usuario.setChaveSenha(chave);
             usuario.setSenha(criptografia.criptografa(textSenha.getText(), chave));
             usuarioDAO.addUsuario(usuario);
-            alerta.usuarioCadastrado();
             Usuario.atualizaUsuarios();
+            tcc.fechaTela();
+            tcc.iniciaStage("Login.fxml");
+            alerta.usuarioCadastrado();
             
         } else {
             System.out.println("Não cadastrou!");
@@ -68,7 +72,6 @@ public class CadastraUsuarioController implements Initializable {
         Alertas alerta = new Alertas();
         
         for (int i = 0; i < Usuario.getUsuarios().size(); i++) {
-            System.out.println(Usuario.getUsuarios().get(i).getLogin());
             if (textLogin.getText().equals(Usuario.getUsuarios().get(i).getLogin())) {
                 alerta.erroCadastroUsuarioLoginExistente();
                 return false;
