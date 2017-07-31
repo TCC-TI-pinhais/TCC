@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -8,13 +11,38 @@
 
 <AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CadastraUsuarioController">
    <children>
-      <Label layoutX="152.0" layoutY="29.0" text="Cadastra" />
-      <Button layoutX="89.0" layoutY="256.0" mnemonicParsing="false" onAction="#cadastra" text="Cadastrar" />
-      <Button layoutX="194.0" layoutY="256.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
-      <CheckBox fx:id="checkRevendedor" layoutX="133.0" layoutY="221.0" mnemonicParsing="false" text="Revendedor" />
-      <TextField fx:id="textLogin" layoutX="101.0" layoutY="77.0" promptText="Login" />
-      <PasswordField fx:id="textSenha" layoutX="101.0" layoutY="116.0" promptText="Senha" />
-      <PasswordField fx:id="textSenha2" layoutX="101.0" layoutY="150.0" promptText="Confirme a Senha" />
-      <TextField fx:id="textEmail" layoutX="101.0" layoutY="184.0" promptText="Email" />
+      <ImageView fitHeight="363.0" fitWidth="572.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../background%20Perfume/perfume2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="129.0" layoutY="53.0" text="Cadastrar">
+         <font>
+            <Font name="Bank Gothic Light BT" size="29.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c3c3c3" />
+                  <Stop color="#c3c3c3" offset="0.007662835249042145" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Button layoutX="82.0" layoutY="284.0" mnemonicParsing="false" onAction="#cadastra" text="Cadastrar" />
+      <ImageView fitHeight="49.0" fitWidth="45.0" layoutX="475.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sair.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="464.0" layoutY="267.0" mnemonicParsing="false" onAction="#voltar" opacity="0.2" prefHeight="59.0" prefWidth="67.0" />
+      <CheckBox fx:id="checkRevendedor" layoutX="153.0" layoutY="238.0" mnemonicParsing="false" text="Revendedor" textFill="WHITE">
+         <font>
+            <Font name="Bank Gothic Light BT" size="12.0" />
+         </font></CheckBox>
+      <TextField fx:id="textLogin" layoutX="41.0" layoutY="123.0" promptText="Login" />
+      <PasswordField fx:id="textSenha" layoutX="41.0" layoutY="179.0" promptText="Senha" />
+      <PasswordField fx:id="textSenha2" layoutX="221.0" layoutY="123.0" promptText="Confirme a Senha" />
+      <TextField fx:id="textEmail" layoutX="221.0" layoutY="179.0" promptText="Email" />
    </children>
 </AnchorPane>
