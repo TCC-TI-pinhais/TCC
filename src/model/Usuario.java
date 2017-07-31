@@ -13,6 +13,7 @@ public class Usuario {
     private String email;
     private boolean revendedor;
     private boolean adm;
+    private String url_imagem;
     private static ObservableList<Usuario> usuarios = FXCollections.observableArrayList();
 
     public static ObservableList<Usuario> getUsuarios() {
@@ -23,6 +24,14 @@ public class Usuario {
         Usuario.usuarios = usuarios;
     }
 
+    public String getUrl_imagem() {
+        return url_imagem;
+    }
+
+    public void setUrl_imagem(String url_imagem) {
+        this.url_imagem = url_imagem;
+    }
+    
     public boolean isAdm() {
         return adm;
     }

@@ -25,8 +25,8 @@ public class InicioController implements Initializable {
     }
     
     public void iniciaImagem(){
-        imagem.setImage(new Image("file:///C:\\Users\\Aluno\\Desktop\\tccu\\src\\imagens\\EssenciAll.png"));
-        imagem2.setImage(new Image("file:///C:\\Users\\Aluno\\Desktop\\tccu\\src\\imagens\\pefumelogo.jpg"));
+        imagem.setImage(new Image("file:///" + System.getProperty("user.dir") + "\\src\\imagens\\EssenciAll.png"));
+        imagem2.setImage(new Image("file:///" + System.getProperty("user.dir") + "\\src\\imagens\\pefumelogo.jpg"));
     }
     
     @Override

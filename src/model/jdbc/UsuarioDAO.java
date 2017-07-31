@@ -12,7 +12,7 @@ import model.Usuario;
 public class UsuarioDAO {
     
     public void addUsuario(Usuario usuario){
-        String sql = "insert into usuario (usuario_login, usuario_senha, chave_senha, email, revendedor, adm) values (?, ?, ?, ?, ?, ?)";
+        String sql = "insert into usuario (usuario_login, usuario_senha, chave_senha, email, revendedor, adm, url_imagem) values (?, ?, ?, ?, ?, ?, ?)";
         ConnectionFactory con = new ConnectionFactory();
         
         try {
@@ -23,6 +23,7 @@ public class UsuarioDAO {
             stmt.setString(4, usuario.getEmail());
             stmt.setBoolean(5, usuario.isRevendedor());
             stmt.setBoolean(6, usuario.isAdm());
+            stmt.setString(7, usuario.getUrl_imagem());
             stmt.execute();
         } catch (SQLException e) {
             System.out.println("Errou");
