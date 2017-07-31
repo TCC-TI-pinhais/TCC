@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="597.0" style="-fx-background-radius: 8; -fx-border-radius: 8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.InicioController">
+   <children>
+      <ImageView fx:id="imagem2" fitHeight="400.0" fitWidth="803.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../background%20Perfume/pefumelogo.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imagem" fitHeight="139.0" fitWidth="160.0" layoutX="219.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="NE_RESIZE" />
+         </cursor>
+         <image>
+            <Image url="@../../../EssenciAll.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="215.0" layoutY="191.0" mnemonicParsing="false" onAction="#inicio" opacity="0.1" prefHeight="144.0" prefWidth="168.0" style="-fx-background-radius: 4; -fx-border-radius: 4;" textFill="WHITE">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label layoutX="186.0" layoutY="40.0" prefHeight="70.0" prefWidth="239.0" text="Bem vindo">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c6c6c6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Bank Gothic Light BT" size="40.0" />
+         </font></Label>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

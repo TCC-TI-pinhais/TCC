@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="669.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../background%20Perfume/desodorante.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="106.0" layoutY="39.0" text="Login">
+         <font>
+            <Font name="Bank Gothic Light BT" size="34.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#949494" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Button layoutX="67.0" layoutY="255.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #364c6e;" text="Login" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#364c6e" />
+         </effect></Button>
+      <Button layoutX="175.0" layoutY="255.0" mnemonicParsing="false" onAction="#fechar" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #364c6e;" text="Fechar" textFill="WHITE" />
+      <TextField fx:id="textLogin" layoutX="82.0" layoutY="132.0" prefHeight="25.0" prefWidth="156.0" promptText="Login">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <PasswordField fx:id="textSenha" layoutX="82.0" layoutY="188.0" prefHeight="25.0" prefWidth="156.0" promptText="Senha">
+         <effect>
+            <InnerShadow />
+         </effect></PasswordField>
+      <ImageView fitHeight="65.0" fitWidth="67.0" layoutX="463.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../cadastrar2.png" />
+         </image>
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect>
+      </ImageView>
+      <Button layoutX="433.0" layoutY="145.0" mnemonicParsing="false" onAction="#cadastrar" opacity="0.2" prefHeight="112.0" prefWidth="125.0" style="-fx-background-radius: 4; -fx-border-radius: 4;" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Separator layoutX="332.0" layoutY="40.0" orientation="VERTICAL" prefHeight="301.0" prefWidth="2.0" />
+      <Label layoutX="357.0" layoutY="47.0" text="Não é cadastrado ainda?">
+         <font>
+            <Font name="Bank Gothic Light BT" size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#949494" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
